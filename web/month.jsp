@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <title>JSP Page</title>
@@ -25,7 +26,8 @@
     <c:choose>
         <c:when test="${servletData.meses=='january' || servletData.meses=='march'|| servletData.meses=='may'|| servletData.meses=='july'|| servletData.meses=='august'|| servletData.meses=='october'|| servletData.meses=='december'}">
         <%out.println("<h1>"+servletData.getMeses()+"</h1>");%>
-            <table border="2">
+    <center>    
+        <table border="2">
                      <thead>
                          <tr>
                              <th>S</th>
@@ -81,11 +83,12 @@
                          
                      </tbody>
                  </table>
-        
+    </center>
         
         </c:when>
         <c:when test="${servletData.meses=='february'}">
         <%out.println("<h1>"+servletData.getMeses()+"</h1>");%>
+        <center>
             <table border="2">
                      <thead>
                          <tr>
@@ -145,10 +148,11 @@
                          
                      </tbody>
                  </table>
-            
+   </center>       
         </c:when>
         <c:when test="${servletData.meses=='april'||servletData.meses=='june'||servletData.meses=='september'||servletData.meses=='november'}">
         <%out.println("<h1>"+servletData.getMeses()+"</h1>");%>
+        <center>
             <table border="2">
                      <thead>
                          <tr>
@@ -207,6 +211,7 @@
                          
                      </tbody>
                  </table>
+        </center>
         
         </c:when>
         <c:otherwise>
